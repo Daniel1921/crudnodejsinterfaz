@@ -36,6 +36,6 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP ||
 
 var server_port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 9000
 
-app.listen(server_port, server_ip_address, () => {
+app.listen(server_port, () => {
     console.log(`server on port ${server_port}`);
 });
