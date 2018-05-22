@@ -13,7 +13,7 @@ if (process.env.OPENSHIFT_MONGODB_DB_URL) {
 }
 
 // connection to db
-mongoose.connect('mongodb://googleteam:1234567google@ds119660.mlab.com:19660/crud-mongo')
+mongoose.connect(mongodb_connection_string)
     .then(db => console.log('db connected'))
     .catch(err => console.log(err));
 
