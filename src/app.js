@@ -34,7 +34,7 @@ app.use('/', indexRoutes);
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP ||
     'localhost'
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 9000
+var server_port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 9000
 
 app.listen(server_port, server_ip_address, () => {
     console.log(`server on port ${server_port}`);
